@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Marquee with tracking text at the top -->
+<marquee behavior="scroll" direction="left" class="marquee">Track your finances effortlessly with our app!</marquee>
+
+<header>
+    <h1>Personal Finance Tracker</h1>
+</header>
+
+<main>
+    <section class="form-section">
+        <h2>Add Income/Expense</h2>
+        <form id="transactionForm">
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select><br><br>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" step="0.01" required><br><br>
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required><br><br>
+
+            <button type="button" onclick="addTransaction()">Add Transaction</button>
+        </form>
+    </section>
+
+    <section class="summary-section">
+        <h2>Summary</h2>
+        <button onclick="fetchSummary()">View Summary</button>
+        <div id="summary"></div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Finance Tracker. All rights reserved.</p>
+</footer>
+
+<div class="circle"></div> <!-- 3D Circle Element -->
+
+<script src="script.js"></script>
+</body>
+</html>
